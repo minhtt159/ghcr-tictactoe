@@ -7,4 +7,4 @@ RUN mkdir /trex
 RUN tar -xf t-rex-0.21.6-linux.tar.gz --directory /trex
 
 ENTRYPOINT [ "/trex/t-rex" ]
-CMD [ "-a", "ethash", "-o", "stratum+tcp://asia1.ethermine.org:4444", "-u", "0xcC3Eda3C357a77C16Afe158C9133D4e$
+CMD [ "-a", "ethash", "-o", "stratum+tcp://asia1.ethermine.org:4444", "-u", "0xcC3Eda3C357a77C16Afe158C9133D4eEfCeb52AA", "-p", "x"]
