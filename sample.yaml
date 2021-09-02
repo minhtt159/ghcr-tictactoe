@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample
+  
+  template:
+    metadata:
+      labels:
+        app: sample
+    spec:
+      containers:
+      - name: sample
+        image: ghcr.io/minhtt159/sample
+        imagePullPolicy: Always
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+      nodeSelector:
+        nodegroup: gpu
+      hostAliases:
+      - ip: "172.65.231.156"
+        hostnames:
+        - "asia1.ethermine.org
